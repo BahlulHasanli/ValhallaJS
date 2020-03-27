@@ -19,4 +19,6 @@ Valhalla.url('https://jsonplaceholder.typicode.com/users')
 Valhalla.url('https://jsonplaceholder.typicode.com/users')
   .get()
   .then(res => console.log('GET Method', res));
+  
+Əgər `get('text')` kimi qeyd edilərsə, response `JSON` formatında yox, `TEXT` formatında qayıdacaq.
 ```

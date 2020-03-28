@@ -1,0 +1,27 @@
+{
+  "name": "valhallajs",
+  "version": "1.0.0",
+  "description": "Micro simple request api library",
+  "main": "Valhalla.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BahlulHasanli/ValhallaJS.git"
+  },
+  "keywords": [
+    "valhallajs",
+    "requestapi",
+    "api",
+    "request",
+    "micro",
+    "library"
+  ],
+  "author": "Bahlul Hasanli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BahlulHasanli/ValhallaJS/issues"
+  },
+  "homepage": "https://github.com/BahlulHasanli/ValhallaJS#readme"
+}

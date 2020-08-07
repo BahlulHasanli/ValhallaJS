@@ -1,8 +1,9 @@
+// Valhalla JS (Micro simple request api library)
 class ValhallaClass {
   url(URI) {
     if (!URI) {
       return {
-        error: 'URL qeyd edilməyib!'
+        error: "URL qeyd edilməyib!",
       };
     }
 
@@ -18,30 +19,30 @@ class ValhallaClass {
   }
 
   get(type) {
-    this.METHOD = 'GET';
-    this.TYPE = type ?? 'json';
+    this.METHOD = "GET";
+    this.TYPE = type ?? "json";
 
     if (!this.METHOD) {
       return {
-        error: 'Method qeyd edilməyib!'
+        error: "Method qeyd edilməyib!",
       };
     }
 
     const GET = async () => {
       const API = await fetch(this.URI, {
-        method: this.METHOD
+        method: this.METHOD,
       });
 
       switch (this.TYPE) {
-        case 'json':
+        case "json":
           return await API.json();
 
-        case 'text':
+        case "text":
           return await API.text();
 
         default:
           return {
-            error: 'Tipdə xəta aşkarlandı!'
+            error: "Tipdə xəta aşkarlandı!",
           };
       }
     };
@@ -50,11 +51,11 @@ class ValhallaClass {
   }
 
   post(data) {
-    this.METHOD = 'POST';
+    this.METHOD = "POST";
 
     if (!this.METHOD) {
       return {
-        error: 'Method qeyd edilməyib!'
+        error: "Method qeyd edilməyib!",
       };
     }
 
@@ -62,22 +63,22 @@ class ValhallaClass {
       if (!this.OPTIONS || !this.OPTIONS.headers) {
         this.OPTIONS = {
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
-          ...this.OPTIONS
+          ...this.OPTIONS,
         };
       }
 
       if (this.OPTIONS.method) {
         return {
-          error: `Options daxilindən ${this.OPTIONS.method} methodunu silin`
+          error: `Options daxilindən ${this.OPTIONS.method} methodunu silin`,
         };
       }
 
       const API = await fetch(this.URI, {
         method: this.METHOD,
         ...this.OPTIONS,
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
 
       return await API.json();

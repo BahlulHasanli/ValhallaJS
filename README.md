@@ -1,12 +1,12 @@
 # ValhallaJS
- Mikro sadə request api kitabxanası
- 
-> Bu kitabxana sizə, `POST` və `GET` metodları vasitəsi ilə hər hansı bir apiyə request göndərməyinizə imkan yaradır.
+ Micro simple request API library
+
+> This library allows you to send requests to any api using `POST` and `GET` methods.
 
 ```javascript
 import Valhalla from './Valhalla.js';
 
-// [POST] metodu
+// [POST] method
 Valhalla.url('https://jsonplaceholder.typicode.com/users')
   .post({
     name: 'Jett Madison',
@@ -15,9 +15,9 @@ Valhalla.url('https://jsonplaceholder.typicode.com/users')
   })
   .then(res => console.log('POST Method', res));
 
-// [GET] metodu
+// [GET] method
 Valhalla.url('https://jsonplaceholder.typicode.com/users')
   .get()
   .then(res => console.log('GET Method', res));
 ```
- Əgər `get('text')` kimi qeyd edilərsə, response `JSON` formatında yox, `TEXT` formatında qayıdacaq.
+ If marked as `get('text')` the response will return in `TEXT` format, not in `JSON` format.
